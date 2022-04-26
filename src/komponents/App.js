@@ -21,7 +21,6 @@ class App extends React.Component {
       },
     });
     this.setState({ imgArr: data.data.results });
-    console.log(this.state.imgArr);
   };
   render() {
     return (

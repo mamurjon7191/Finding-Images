@@ -1,18 +1,14 @@
 import React from "react";
-import "../Style.css";
+import "../StyleCard.css";
+import ImageCard from "./ImageCard.js";
 
 const Image = function (props) {
-  console.log(props);
   const ImageRender = function () {
     return props.arr.map((val) => {
-      return (
-        <div key={val.id}>
-          <img src={val.urls.regular} className="img-list"></img>
-        </div>
-      );
+      return <ImageCard key={val.id} data={val} />;
     });
   };
-  return <div className="contan">{ImageRender()}</div>;
+  return <div className="img-list">{ImageRender()}</div>;
 };
 
 export default Image;
